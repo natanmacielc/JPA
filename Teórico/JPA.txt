@@ -28,6 +28,9 @@ Para que serve?
 	Com intuito de padronizar as implementações de ORM em Java, foi elaborada a especificação JPA, como parte da plataforma Java EE 5. A versão atual do JPA é a 2.1 e ela é suportada por todos os servidores
 aderentes ao padrão Java EE existentes no mercado (JBoss, GlassFish, WebSphere, etc.).
 
+Onde utilizar?
+	Em projetos Java, que necessite da conexão com um banco de dados relacional, servindo como especificação para um framework de mapeamento objeto-relacional.
+
 Como utilizar?
 	No JPA, as classes Java que representam os dados a serem armazenados no SGBD são chamadas de Entidades (Entity). Elas são classes comuns que contêm apenas atributos e métodos
 getters (que recuperam o valor dos atributos) e setters (que modificam o valor dos atributos). O que torna essa classe uma entidade é a presença da anotação (Annotation) 
