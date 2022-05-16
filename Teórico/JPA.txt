@@ -1,0 +1,36 @@
+Estudos
+=================================================================================================================================================
+JPA (Java Persistence API)
+
+O que é?
+	JPA é a especificação do Java que dita como os frameworks ORM(Object Relational Mapper ou Mapeamento Objeto-Relacional) devem ser implementados. Ela foi criada com o intuito de padronizar essas soluções.
+Antes de sua criação existiam diversos frameworks e bibliotecas que abstraiam os desafios da persistência com ORM em Java. 
+
+Sua origem:
+	Existiam diversas tecnologias que serviam como especificação para a implementação da persistência de dados, porém, cada uma fazia isso de uma maneira diferente e eventualmente a empresa que mantinha ela
+deixava de existir, trazendo prejuízos não só para a empresa, arquitetos e desenvolvedores, mas também para o próprio Java. O JPA então foi criado como uma maneira de padronizar essas soluções, e o Hibernate
+passou a implementá-la.
+
+Qual sua conexão com o Hibernate?
+	O Hibernate é uma opção de implementação do conceito de mapeamento objeto-relacional, ou ORM, para persistência de dados. O JPA é basicamente uma especificação, que dita como esse framework,
+ou qualquer outro framework e biblioteca que realize a persistência com ORM em Java, deverá ser implementado.
+
+
+API JDBC vs API JPA
+	Para o mercado, não basta saber utilizar a API JDBC para persistir dados com Java. Conhecer a API JPA e pelo menos um framework que a implemente é fundamental. 
+A JPA abstrai e simplifica o acesso a dados, tornando transparente ao programador muitas preocupações que ele possui quando lida apenas com a JDBC, entre elas, o mapeamento objeto relacional.
+
+	No JDBC, o acesso ao banco de dados é feito através de comandos (Statements) escritos na linguagem SQL (Structured Query Language), que é a linguagem padrão dos gerenciadores de banco de dados.
+Em seguida surgiram as tecnologias de mapeamento objeto-relacional, conhecidas por ORM (Object-Relational Mapping). Tais tecnologias estabelecem uma “ponte” entre esses dois modelos de dados: 
+o modelo orientado a objetos, utilizado em linguagens de programação como o Java, e o modelo relacional, utilizado pela maioria dos SGBDs.
+
+Para que serve?
+	Com intuito de padronizar as implementações de ORM em Java, foi elaborada a especificação JPA, como parte da plataforma Java EE 5. A versão atual do JPA é a 2.1 e ela é suportada por todos os servidores
+aderentes ao padrão Java EE existentes no mercado (JBoss, GlassFish, WebSphere, etc.).
+
+Como utilizar?
+	No JPA, as classes Java que representam os dados a serem armazenados no SGBD são chamadas de Entidades (Entity). Elas são classes comuns que contêm apenas atributos e métodos
+getters (que recuperam o valor dos atributos) e setters (que modificam o valor dos atributos). O que torna essa classe uma entidade é a presença da anotação (Annotation) 
+@javax.persistence.Entity. Tal anotação faz com que o JPA associe a classe Java em questão a uma tabela do banco de dados. A própria implementação do JPA se encarregará de criar a 
+tabela automaticamente no banco de dados relacional. No código Java, basta criar as instâncias das entidades, preenchendo-as com os dados desejados e depois salvar no banco de dados.
+Cada entidade, quando persistida, corresponderá a um registro na tabela do banco de dados.
